@@ -11,6 +11,7 @@ package game2048f;
  * @author Dell
  */
 
+
 public class Board {
     
     private int[][] values = new int[4][4];
@@ -45,6 +46,14 @@ public class Board {
             }
         }
         return board;
+    }
+    
+    public void setCellValue(int r,int c, int value){
+        values[r][c] = value;
+    }
+    
+    public int getCellValue(int r, int c){
+        return values[r][c];
     }
    
 }
