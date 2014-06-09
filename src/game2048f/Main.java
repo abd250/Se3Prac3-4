@@ -17,6 +17,7 @@ package game2048f;
 
 
 
+
 import java.util.Scanner;
 
 public class Main {
@@ -32,7 +33,6 @@ public class Main {
         setRandomCellValue();
         do{
             print(board.toString());
-            
             print("Next move? ");
             
             userInput = console.nextLine();
@@ -49,6 +49,7 @@ public class Main {
                 else if(userInput.equalsIgnoreCase("D")){
                     board.rotateDown();
                 }
+                setRandomCellValue();
             }
             else{
                 print("Invalid input, please enter l, r, t, d, or x.\n");
