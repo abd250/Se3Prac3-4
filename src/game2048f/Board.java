@@ -13,6 +13,7 @@ package game2048f;
 
 
 
+
 public class Board {
     
     private int[][] values = new int[4][4];
@@ -57,6 +58,18 @@ public class Board {
         return values[r][c];
     }
    
+    public boolean isGameOver(){
+        boolean gameOver = true;
+        for(int r=0; r<4; r++){
+            for(int c=0; c<4; c++){
+                if(values[r][c]==0){
+                    gameOver = false;
+                }
+            }
+        }
+        return gameOver;
+    }
+    
     public void rotateLeft(){
         
     }
