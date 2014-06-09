@@ -15,6 +15,8 @@ package game2048f;
 
 
 
+
+
 import java.util.Scanner;
 
 public class Main {
@@ -52,7 +54,7 @@ public class Main {
                 print("Invalid input, please enter l, r, t, d, or x.\n");
             }
             
-        }while(!userInput.equalsIgnoreCase("X"));
+        }while(!userInput.equalsIgnoreCase("X") && !board.isGameOver());
     }
     
     static void print(String str){
