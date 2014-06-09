@@ -12,6 +12,7 @@ package game2048f;
  */
 
 
+
 import java.util.Scanner;
 
 public class Main {
@@ -22,7 +23,9 @@ public class Main {
     public static void main(String[] args) {
         
         String userInput;
-		
+
+        setRandomCellValue();
+        setRandomCellValue();
         do{
             print(board.toString());
             
