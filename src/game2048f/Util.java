@@ -11,10 +11,18 @@ package game2048f;
  * @author Dell
  */
 
+
 public class Util {
     
     public static int getRandomCellNumber(){
         return (int)(Math.random() * 4);
     }
     
+    public static int getRandomValue(){
+        if ((int)(Math.random() * 2) ==0 ){
+            return 2;
+        }
+        return 4;
+    }
 }
+
