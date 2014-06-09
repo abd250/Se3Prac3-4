@@ -1,0 +1,50 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
+package game2048f;
+
+/**
+ *
+ * @author Dell
+ */
+
+public class Board {
+    
+    private int[][] values = new int[4][4];
+    
+    public Board(){
+        for(int r=0; r<4; r++){
+            for(int c=0; c<4; c++){
+                values[r][c]=0;
+            }
+        }
+    }
+    
+    @Override
+    public String toString() {
+        String board = "";
+        for(int r=0; r<4; r++){
+            for(int c=0; c<4; c++){
+                if(values[r][c]<10){
+                    System.out.print("[   "+values[r][c]+"]");
+                } else if(values[r][c]<100){
+                    System.out.print("[  "+values[r][c]+"]");
+                }
+                else if(values[r][c]<1000){
+                    System.out.print("[ "+values[r][c]+"]");
+                }
+                else{
+                    System.out.print("["+values[r][c]+"]");
+                }
+                if(c==3){
+                    System.out.print("\n");
+                }
+            }
+        }
+        return board;
+    }
+   
+}
