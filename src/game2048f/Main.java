@@ -13,6 +13,7 @@ package game2048f;
 
 
 
+
 import java.util.Scanner;
 
 public class Main {
@@ -32,6 +33,12 @@ public class Main {
             print("Next move? ");
             
             userInput = console.nextLine();
+            if(validUserInput(userInput)){
+                
+            }
+            else{
+                print("Invalid input, please enter l, r, t, d, or x.\n");
+            }
             
         }while(!userInput.equalsIgnoreCase("X"));
     }
@@ -49,6 +56,17 @@ public class Main {
         
         int value = Util.getRandomValue();
         board.setCellValue(r, c, value);
+    }
+
+    private static boolean validUserInput(String userInput) {
+        if( userInput.equalsIgnoreCase("L") ||
+            userInput.equalsIgnoreCase("R") ||
+            userInput.equalsIgnoreCase("T") ||
+            userInput.equalsIgnoreCase("D") ||
+            userInput.equalsIgnoreCase("X")){
+            return true;
+        }
+        return false;
     }
 
 }
