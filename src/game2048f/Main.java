@@ -19,12 +19,14 @@ package game2048f;
 
 
 
+
 import java.util.Scanner;
 
 public class Main {
 
     static Scanner console = new Scanner(System.in);
     static Board board = new Board();
+    static int userScore = 0;
     
     public static void main(String[] args) {
         
