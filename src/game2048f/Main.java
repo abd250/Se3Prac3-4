@@ -18,6 +18,7 @@ package game2048f;
 
 
 
+
 import java.util.Scanner;
 
 public class Main {
@@ -64,10 +65,12 @@ public class Main {
 
     public static void setRandomCellValue() {
         int r,c;
+        int trials = 1000;
         do{
             r = Util.getRandomCellNumber();
             c = Util.getRandomCellNumber();
-        }while(board.getCellValue(r, c)!=0);
+            trials--;
+        }while(board.getCellValue(r, c)!=0 && trials>0);
         
         int value = Util.getRandomValue();
         board.setCellValue(r, c, value);
