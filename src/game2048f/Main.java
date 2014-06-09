@@ -11,6 +11,7 @@ package game2048f;
  * @author Dell
  */
 
+
 import java.util.Scanner;
 
 public class Main {
@@ -21,6 +22,7 @@ public class Main {
     public static void main(String[] args) {
         
         String userInput;
+		
         do{
             print(board.toString());
             
@@ -33,6 +35,17 @@ public class Main {
     
     static void print(String str){
         System.out.print(str);
+    }
+
+    public static void setRandomCellValue() {
+        int r,c;
+        do{
+            r = Util.getRandomCellNumber();
+            c = Util.getRandomCellNumber();
+        }while(board.getCellValue(r, c)!=0);
+        
+        int value = Util.getRandomValue();
+        board.setCellValue(r, c, value);
     }
 
 }
