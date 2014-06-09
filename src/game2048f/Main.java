@@ -14,6 +14,7 @@ package game2048f;
 
 
 
+
 import java.util.Scanner;
 
 public class Main {
@@ -34,7 +35,18 @@ public class Main {
             
             userInput = console.nextLine();
             if(validUserInput(userInput)){
-                
+                if(userInput.equalsIgnoreCase("L")){
+                    board.rotateLeft();
+                }
+                else if(userInput.equalsIgnoreCase("R")){
+                    board.rotateRight();
+                }
+                else if(userInput.equalsIgnoreCase("T")){
+                    board.rotateTop();
+                }
+                else if(userInput.equalsIgnoreCase("D")){
+                    board.rotateDown();
+                }
             }
             else{
                 print("Invalid input, please enter l, r, t, d, or x.\n");
