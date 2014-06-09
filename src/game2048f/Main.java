@@ -20,6 +20,7 @@ package game2048f;
 
 
 
+
 import java.util.Scanner;
 
 public class Main {
@@ -59,6 +60,8 @@ public class Main {
             }
             
         }while(!userInput.equalsIgnoreCase("X") && !board.isGameOver());
+        
+        print("Game over!\n");
     }
     
     static void print(String str){
