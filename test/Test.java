@@ -14,6 +14,9 @@ import game2048f.Board;
 
 
 
+
+import static org.junit.Assert.*;
+
 public class Test {
 
     @org.junit.Test
@@ -25,6 +28,18 @@ public class Test {
         assertEquals(board.getCellValue(0, 1), 0);
         assertEquals(board.getCellValue(0, 2), 0);
         assertEquals(board.getCellValue(0, 3), 0);
+        
+    }
+    
+    @org.junit.Test
+    public void testRotateRight(){
+        Board board = new Board();
+        board.setCellValue(0, 0, 2);
+        board.rotateRight();
+        assertEquals(board.getCellValue(0, 0), 0);
+        assertEquals(board.getCellValue(0, 1), 0);
+        assertEquals(board.getCellValue(0, 2), 0);
+        assertEquals(board.getCellValue(0, 3), 2);
         
     }
     
