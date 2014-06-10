@@ -13,6 +13,7 @@ import game2048f.Board;
  */
 
 
+
 public class Test {
 
     @org.junit.Test
@@ -48,6 +49,18 @@ public class Test {
         assertEquals(board.getCellValue(1, 0), 0);
         assertEquals(board.getCellValue(2, 0), 0);
         assertEquals(board.getCellValue(3, 0), 0);
+        
+    }
+    
+    @org.junit.Test
+    public void testRotateDown(){
+        Board board = new Board();
+        board.setCellValue(0, 0, 2);
+        board.rotateDown();
+        assertEquals(board.getCellValue(0, 0), 0);
+        assertEquals(board.getCellValue(1, 0), 0);
+        assertEquals(board.getCellValue(2, 0), 0);
+        assertEquals(board.getCellValue(3, 0), 2);
         
     }
     
