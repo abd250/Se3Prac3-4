@@ -56,6 +56,7 @@ public class Main {
         }while(!userInput.equalsIgnoreCase("X") && !board.isGameOver());
         print(board.toString());
         print("Game over!\n");
+        print("user score is: "+USER_SCORE+"\n");
     }
     
     static void print(String str){

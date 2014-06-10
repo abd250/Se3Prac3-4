@@ -131,6 +131,7 @@ public class Board {
             for(int c=0; c<3; c++){
                 if(values[r][c] == values[r][c+1]){
                     values[r][c] = values[r][c]+values[r][c+1];
+                    Main.USER_SCORE += values[r][c];
                     values[r][c+1] = 0;
                     rotateLeft();
                 }
@@ -143,6 +144,7 @@ public class Board {
             for(int c=3; c>0; c--){
                 if(values[r][c] == values[r][c-1]){
                     values[r][c] = values[r][c]+values[r][c-1];
+                    Main.USER_SCORE += values[r][c];
                     values[r][c-1] = 0;
                     rotateRight();
                 }
@@ -155,6 +157,7 @@ public class Board {
             for(int c=0; c<3; c++){
                 if(values[c][r] == values[c+1][r]){
                     values[c][r] = values[c][r]+values[c+1][r];
+                    Main.USER_SCORE += values[c][r];
                     values[c+1][r] = 0;
                     rotateTop();
                 }
@@ -167,6 +170,7 @@ public class Board {
             for(int c=3; c>0; c--){
                 if(values[c][r] == values[c-1][r]){
                     values[c][r] = values[c][r]+values[c-1][r];
+                    Main.USER_SCORE += values[c][r];
                     values[c-1][r] = 0;
                     rotateDown();
                 }
