@@ -37,6 +37,7 @@ public class Main {
                 }
                 else if(userInput.equalsIgnoreCase("R")){
                     board.rotateRight();
+                    board.rightMerge();
                 }
                 else if(userInput.equalsIgnoreCase("T")){
                     board.rotateTop();

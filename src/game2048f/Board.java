@@ -137,4 +137,17 @@ public class Board {
             }
         }
     }
+    
+    public void rightMerge(){
+        for(int r=0; r<4; r++){
+            for(int c=3; c>0; c--){
+                if(values[r][c] == values[r][c-1]){
+                    values[r][c] = values[r][c]+values[r][c-1];
+                    values[r][c-1] = 0;
+                    rotateRight();
+                }
+            }
+        }
+    }
+    
 }
