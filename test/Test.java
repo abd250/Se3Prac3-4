@@ -64,4 +64,17 @@ public class Test {
         
     }
     
+    @org.junit.Test
+    public void testLeftMerge(){
+        Board board = new Board();
+        board.setCellValue(0, 0, 2);
+        board.setCellValue(0, 1, 2);
+        board.leftMerge();
+        assertEquals(board.getCellValue(0, 0), 4);
+        assertEquals(board.getCellValue(0, 1), 0);
+        assertEquals(board.getCellValue(0, 2), 0);
+        assertEquals(board.getCellValue(0, 3), 0);
+        
+    }
+    
 }
