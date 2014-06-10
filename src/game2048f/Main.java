@@ -11,16 +11,6 @@ package game2048f;
  * @author Dell
  */
 
-
-
-
-
-
-
-
-
-
-
 import java.util.Scanner;
 
 public class Main {
