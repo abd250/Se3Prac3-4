@@ -162,4 +162,16 @@ public class Board {
         }
     }
     
+    public void downMerge(){
+        for(int r=0; r<4; r++){
+            for(int c=3; c>0; c--){
+                if(values[c][r] == values[c-1][r]){
+                    values[c][r] = values[c][r]+values[c-1][r];
+                    values[c-1][r] = 0;
+                    rotateDown();
+                }
+            }
+        }
+    }
+    
 }

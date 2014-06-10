@@ -45,6 +45,7 @@ public class Main {
                 }
                 else if(userInput.equalsIgnoreCase("D")){
                     board.rotateDown();
+                    board.downMerge();
                 }
                 setRandomCellValue();
             }
