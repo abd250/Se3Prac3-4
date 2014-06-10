@@ -150,4 +150,16 @@ public class Board {
         }
     }
     
+    public void topMerge(){
+        for(int r=0; r<4; r++){
+            for(int c=0; c<3; c++){
+                if(values[c][r] == values[c+1][r]){
+                    values[c][r] = values[c][r]+values[c+1][r];
+                    values[c+1][r] = 0;
+                    rotateTop();
+                }
+            }
+        }
+    }
+    
 }
