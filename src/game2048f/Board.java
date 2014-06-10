@@ -16,6 +16,7 @@ package game2048f;
 
 
 
+
 public class Board {
     
     private int[][] values = new int[4][4];
@@ -99,10 +100,20 @@ public class Board {
     }
     
     public void rotateTop(){
-        
+        for(int r=0; r<4; r++){
+            for(int c=2; c>=0; c--){
+                if(values[c][r]==0){
+                    for(int i=c+1; i<4; i++){
+                        values[i-1][r] = values[i][r];
+                        values[i][r] = 0;
+                    }
+                }
+            }
+        }
     }
     
     public void rotateDown(){
         
     }
 }
+
