@@ -90,4 +90,17 @@ public class Test {
         
     }
     
+    @org.junit.Test
+    public void testTopMerge(){
+        Board board = new Board();
+        board.setCellValue(0, 0, 2);
+        board.setCellValue(1, 0, 2);
+        board.topMerge();
+        assertEquals(board.getCellValue(0, 0), 4);
+        assertEquals(board.getCellValue(1, 0), 0);
+        assertEquals(board.getCellValue(2, 0), 0);
+        assertEquals(board.getCellValue(3, 0), 0);
+        
+    }
+    
 }
